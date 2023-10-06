@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-
 const userSchema = new mongoose.Schema({
     username: {type : String , required : true},
     email : {type : String , required : true},
@@ -10,6 +9,7 @@ const userSchema = new mongoose.Schema({
         sessionToken:{type : String , select : false},
     },
 });
+
 
 export const UserModel = mongoose.model('User',userSchema);
 
