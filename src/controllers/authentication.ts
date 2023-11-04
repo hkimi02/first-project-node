@@ -2,6 +2,7 @@ import  express  from "express";
 
 import { createUser, getUsers, getUserByEmail } from '../db/users'
 import { random,authentification } from "../helpers";
+import cookieParser from "cookie-parser";
 
 export const login= async (req:express.Request,res:express.Response) => {
         try{
